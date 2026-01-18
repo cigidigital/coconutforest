@@ -70,7 +70,7 @@
 	<div class="container">
 		<div class="section-title">
 			<h5>Our Product</h5>
-			<h3>Our Product</h3>
+			<h3>Our Best Product</h3>
 		</div>
 		
 		<div class="products-grid" class:visible={visible}>
@@ -116,11 +116,13 @@
 	
 	.products-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-template-columns: repeat(2, 1fr);
 		gap: 30px;
 		opacity: 0;
 		transform: translateY(30px);
 		transition: all 0.8s ease;
+		max-width: 900px;
+		margin: 0 auto;
 	}
 	
 	.products-grid.visible {
@@ -175,7 +177,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: linear-gradient(135deg, rgba(46, 125, 50, 0.92) 0%, rgba(26, 95, 26, 0.85) 100%);
+		background: linear-gradient(135deg, rgba(26, 95, 26, 0.95) 0%, rgba(46, 125, 50, 0.92) 100%);
 		opacity: 0;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		z-index: 1;
@@ -202,10 +204,10 @@
 	}
 	
 	.product-caption h4 {
-		color: white;
+		color: #ffffff;
 		font-size: 26px;
 		font-weight: 700;
-		text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.4);
+		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
 		letter-spacing: 0.5px;
 	}
 	
@@ -313,6 +315,12 @@
 		}
 	}
 	
+	@media (max-width: 968px) {
+		.products-grid {
+			max-width: 600px;
+		}
+	}
+	
 	@media (max-width: 768px) {
 		.products-grid {
 			grid-template-columns: repeat(2, 1fr);
@@ -320,9 +328,14 @@
 		}
 	}
 	
-	@media (max-width: 480px) {
+	@media (max-width: 640px) {
 		.products-grid {
 			grid-template-columns: 1fr;
+			max-width: 400px;
+		}
+		
+		.product-card {
+			max-width: 100%;
 		}
 	}
 </style>

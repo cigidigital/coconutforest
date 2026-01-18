@@ -56,8 +56,9 @@
 	
 	<div class="hero-scroll">
 		<a href="#about" aria-label="Scroll to about section">
-			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-				<path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M19 12L12 19L5 12" />
+				<path d="M19 5L12 12L5 5" />
 			</svg>
 		</a>
 	</div>
@@ -229,19 +230,33 @@
 		bottom: 40px;
 		left: 50%;
 		transform: translateX(-50%);
-		animation: bounce 2.5s infinite;
 		z-index: 2;
 	}
 	
 	.hero-scroll a {
-		color: white;
-		opacity: 0.85;
-		transition: opacity var(--transition-base);
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 56px;
+		height: 56px;
+		background: rgba(255, 255, 255, 0.95);
+		border-radius: 50%;
+		color: var(--coconut-green-dark);
+		transition: all var(--transition-base);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+		animation: bounceDown 2.5s infinite;
 	}
 	
 	.hero-scroll a:hover {
-		opacity: 1;
+		background: white;
+		transform: translateY(-4px);
+		box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+	}
+	
+	.hero-scroll a svg {
+		width: 28px;
+		height: 28px;
+		stroke-width: 2.5;
 	}
 	
 	@keyframes float {
@@ -264,15 +279,31 @@
 		}
 	}
 	
-	@keyframes bounce {
+	@keyframes bounceDown {
 		0%, 20%, 50%, 80%, 100% {
-			transform: translateX(-50%) translateY(0);
+			transform: translateY(0);
 		}
 		40% {
-			transform: translateX(-50%) translateY(-12px);
+			transform: translateY(-8px);
 		}
 		60% {
-			transform: translateX(-50%) translateY(-6px);
+			transform: translateY(-4px);
+		}
+	}
+	
+	@media (max-width: 968px) {
+		.hero-scroll {
+			bottom: 30px;
+		}
+		
+		.hero-scroll a {
+			width: 50px;
+			height: 50px;
+		}
+		
+		.hero-scroll a svg {
+			width: 24px;
+			height: 24px;
 		}
 	}
 	
@@ -294,6 +325,27 @@
 		.hero-leaf-1,
 		.hero-leaf-2 {
 			display: none;
+		}
+		
+		.hero-scroll {
+			bottom: 20px;
+		}
+		
+		.hero-scroll a {
+			width: 48px;
+			height: 48px;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.hero-scroll a {
+			width: 44px;
+			height: 44px;
+		}
+		
+		.hero-scroll a svg {
+			width: 20px;
+			height: 20px;
 		}
 	}
 </style>

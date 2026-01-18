@@ -198,10 +198,10 @@
 	}
 	
 	.contact-method:hover {
-		background: linear-gradient(135deg, var(--coconut-green), var(--coconut-green-light));
+		background: linear-gradient(135deg, var(--coconut-green-dark), var(--coconut-green));
 		color: white;
 		transform: translateX(8px);
-		box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+		box-shadow: 0 6px 20px rgba(26, 95, 26, 0.35);
 	}
 	
 	.method-icon {
@@ -281,9 +281,9 @@
 	}
 	
 	.submit-message.success {
-		background: #d4edda;
-		color: #155724;
-		border: 1px solid #c3e6cb;
+		background: #d1e7dd;
+		color: #0f5132;
+		border: 1px solid #badbcc;
 	}
 	
 	.contact-form .btn {
@@ -318,6 +318,10 @@
 			max-width: 300px;
 			margin: 0 auto;
 		}
+		
+		.contact-form-wrapper {
+			padding: 35px 30px;
+		}
 	}
 	
 	@media (max-width: 640px) {
@@ -327,6 +331,16 @@
 		
 		.contact-form-wrapper {
 			padding: 30px 20px;
+		}
+		
+		.contact-methods {
+			max-width: 100%;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.contact-form-wrapper {
+			padding: 25px 18px;
 		}
 	}
 </style>

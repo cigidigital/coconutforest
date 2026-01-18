@@ -250,9 +250,9 @@
 	}
 	
 	.indicator.active {
-		background: linear-gradient(90deg, var(--coconut-green-light), var(--coconut-green));
+		background: linear-gradient(90deg, var(--coconut-green-light), var(--coconut-green-dark));
 		width: 50px;
-		box-shadow: 0 2px 8px rgba(46, 125, 50, 0.3);
+		box-shadow: 0 2px 8px rgba(26, 95, 26, 0.35);
 	}
 	
 	.quote-icons {
@@ -310,6 +310,10 @@
 			padding: 30px 20px;
 		}
 		
+		.team-member {
+			gap: 25px;
+		}
+		
 		.member-image {
 			width: 150px;
 			height: 150px;
@@ -321,6 +325,41 @@
 		
 		.member-quote {
 			font-size: 16px;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.team-slider {
+			padding: 25px 15px;
+		}
+		
+		.member-image {
+			width: 120px;
+			height: 120px;
+			border-width: 4px;
+		}
+		
+		.member-info h4 {
+			font-size: 22px;
+		}
+		
+		.member-quote {
+			font-size: 15px;
+		}
+		
+		.quote-left,
+		.quote-right {
+			width: 60px;
+		}
+		
+		.quote-left {
+			top: 20px;
+			left: 20px;
+		}
+		
+		.quote-right {
+			bottom: 20px;
+			right: 20px;
 		}
 	}
 </style>

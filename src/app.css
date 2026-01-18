@@ -11,10 +11,10 @@
 	--coconut-cream: #fff8f0;
 	--coconut-sand: #e8ddd4;
 	
-	/* Text Colors */
+	/* Text Colors - WCAG AA compliant */
 	--text-dark: #1a1a1a;
-	--text-medium: #4a4a4a;
-	--text-light: #6b6b6b;
+	--text-medium: #3d3d3d;
+	--text-light: #666666;
 	--text-white: #ffffff;
 	
 	/* Spacing */
@@ -102,13 +102,13 @@ a {
 	text-align: center;
 }
 
-.btn-primary {
-	background: linear-gradient(135deg, var(--coconut-green), var(--coconut-green-light));
-	color: var(--text-white);
-	box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
-	position: relative;
-	overflow: hidden;
-}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--coconut-green-dark), var(--coconut-green));
+		color: var(--text-white);
+		box-shadow: 0 4px 15px rgba(26, 95, 26, 0.35);
+		position: relative;
+		overflow: hidden;
+	}
 
 .btn-primary::before {
 	content: '';

@@ -170,10 +170,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: linear-gradient(135deg, var(--coconut-green-light), var(--coconut-green));
+		background: linear-gradient(135deg, var(--coconut-green-dark), var(--coconut-green));
 		border-radius: 20px;
 		color: white;
-		box-shadow: 0 8px 20px rgba(46, 125, 50, 0.25);
+		box-shadow: 0 8px 20px rgba(26, 95, 26, 0.3);
 		transition: all var(--transition-base);
 	}
 	
@@ -184,7 +184,7 @@
 	
 	.feature-card:hover .feature-icon {
 		transform: translateY(-5px) rotate(5deg);
-		box-shadow: 0 12px 30px rgba(46, 125, 50, 0.35);
+		box-shadow: 0 12px 30px rgba(26, 95, 26, 0.4);
 	}
 	
 	.feature-card h4 {
@@ -219,6 +219,22 @@
 		
 		.feature-card {
 			padding: 30px;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.feature-card {
+			padding: 25px 20px;
+		}
+		
+		.feature-icon {
+			width: 70px;
+			height: 70px;
+		}
+		
+		.feature-icon svg {
+			width: 35px;
+			height: 35px;
 		}
 	}
 </style>
